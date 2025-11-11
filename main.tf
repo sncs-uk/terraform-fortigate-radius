@@ -51,6 +51,7 @@ resource fortios_user_radius radius {
 }
 
 resource fortios_user_group groups {
+  depends_on          = [ fortios_user_radius.radius ]
   for_each            = { for radius_group in local.radius_groups : radius_group.name => radius_group }
 
   name                = each.value.name
