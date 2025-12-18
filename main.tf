@@ -4,7 +4,7 @@
  * This terraform module configures the RADIUS servers and groups on a FortiGate appliance
  */
 terraform {
-  required_version = ">= 1.13.0"
+  required_version = ">= 1.11.0"
   required_providers {
     fortios = {
       source  = "fortinetdev/fortios"
